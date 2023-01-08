@@ -191,7 +191,7 @@ input[type=submit] {
     font-size: 1.5rem;
   }
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 600px) {
   .padd {
     padding: calc(1rem + 1vh) calc(1rem + 2vw);
   }

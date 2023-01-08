@@ -2,7 +2,7 @@
 @use "../general-styles/gradient" as grad;
 @use "../general-styles/colors" as clrs;
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 600px) {
   .padd {
     padding: padd.padding-d-v(s) padd.padding-d-h(s);
   }
