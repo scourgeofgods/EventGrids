@@ -1,0 +1,97 @@
+@use "../general-styles/padding" as padd;
+@use "../general-styles/gradient" as grad;
+@use "../general-styles/colors" as clrs;
+
+@media screen and (max-width: 600px) {
+  .padd {
+    padding: padd.padding-d-v(s) padd.padding-d-h(s);
+  }
+  .header {
+    &__nav {
+      flex-direction: column;
+      align-items: flex-start;
+      position: relative;
+      &--links {
+        flex-direction: column;
+        row-gap: 4rem;
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        background-image: grad.gradient("1");
+        padding: padd.padding-d-v(l) padd.padding-d-h(l);
+        transform: translatex(-100rem) rotate(-0.5rem);
+        z-index: 998;
+        transition: all 0.5s ease-out;
+      }
+
+      &--logo {
+        justify-self: flex-start;
+        align-self: flex-start;
+        z-index: 999;
+        position: fixed;
+        left: 8%;
+      }
+      &--cta {
+        align-self: center;
+        position: fixed;
+        top: 92%;
+        left: 8%;
+        z-index: 9999;
+      }
+      .display-nav {
+        transform: translateX(0) rotate(0);
+      }
+      &--hamburger {
+        position: fixed;
+        top: 2rem;
+        right: 3rem;
+        height: 4rem;
+        width: 7rem;
+        cursor: pointer;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        row-gap: 0.5rem;
+        padding: 0 1rem;
+        background-image: grad.gradient("1");
+        border-radius: 0.5rem;
+        z-index: 99;
+        .line-1,
+        .line-2,
+        .line-3 {
+          height: 0.2rem;
+          background-color: clrs.color-theme("1");
+          transition: all 0.25s ease-in-out;
+        }
+        .line-1 {
+          width: 70%;
+          align-self: flex-end;
+        }
+        .line-2 {
+          width: 75%;
+          align-self: center;
+        }
+        .line-3 {
+          width: 80%;
+          align-items: flex-start;
+        }
+
+        .line-1-toggled {
+          transform: rotate(45deg) translateX(-0.5rem) translateY(1rem);
+          width: 50%;
+        }
+        .line-2-toggled {
+          transform: rotate(-45deg) translateX(0.4rem) translateY(-0.2rem);
+          width: 50%;
+        }
+        .line-3-toggled {
+          visibility: hidden;
+          opacity: 0;
+          display: none;
+        }
+      }
+    }
+  }
+}

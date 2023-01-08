@@ -1,0 +1,72 @@
+@use "../general-styles/colors" as clrs;
+@use "../general-styles/padding" as padd;
+@use "../general-styles/typography" as type;
+
+.header {
+  padding-bottom: calc(padd.padding-d-v(mc) + padd.padding-d-v(mc));
+  gap: calc(4rem + 4vw);
+  &__nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    &--logo {
+      width: 20rem;
+      img {
+        height: 75%;
+        width: 75%;
+      }
+    }
+    &--links {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      &__link {
+        color: clrs.colors-link("1");
+        font-size: type.font-size-st(sc);
+        font-weight: type.font-weight(bold);
+      }
+    }
+    &--cta {
+      background-color: clrs.color-theme("3");
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      column-gap: 1rem;
+      transition: all 0.45s ease-in-out;
+      &:hover {
+        background-color: clrs.color-theme("2");
+      }
+    }
+  }
+
+  &__hero {
+    display: grid;
+    justify-content: center;
+    gap: 3rem;
+    text-align: center;
+    color: clrs.colors-type("1");
+    &--location {
+      font-size: type.font-size-st(sc);
+      font-weight: type.font-weight(medium);
+      background-color: rgba(clrs.color-theme("1"), 0.1);
+      padding: padd.padding-st-v(s) padd.padding-st-h(l);
+      border-radius: 0.5rem;
+    }
+    &--title {
+      span {
+        display: block !important;
+      }
+    }
+    &--tickets-link {
+      background-color: clrs.color-theme("2");
+      transition: all 0.25s ease-in-out;
+
+      &:hover {
+        background-color: clrs.color-theme("3");
+      }
+    }
+  }
+}

@@ -1,0 +1,5 @@
+@use "../general-styles/padding" as padd;
+
+.padd {
+  padding: padd.padding-d-v(s) padd.padding-d-h(s);
+}

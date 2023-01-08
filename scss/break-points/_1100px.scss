@@ -1,0 +1,18 @@
+@use "../general-styles/typography" as type;
+
+@media screen and (max-width: 1100px) {
+  .header {
+    &__nav {
+      &--links {
+        flex-basis: 100%;
+        order: 3;
+      }
+    }
+    &__hero {
+      gap: 2rem;
+      &--para {
+        font-size: type.font-size-st(sc);
+      }
+    }
+  }
+}

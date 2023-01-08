@@ -1,0 +1,14 @@
+@use "../general-styles/colors" as clrs;
+@use "../general-styles/typography" as type;
+@use "../general-styles/padding" as padd;
+
+.sec-para {
+  font-size: type.font-size-d(xs);
+  color: clrs.colors-type("1");
+  text-align: center;
+  margin-bottom: 4rem;
+
+  span {
+    display: block;
+  }
+}

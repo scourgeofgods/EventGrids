@@ -1,0 +1,10 @@
+@use "../general-styles/colors" as clrs;
+@use "../general-styles/padding" as padd;
+@use "../general-styles/typography" as type;
+
+.sec-link,
+input[type="submit"] {
+  color: clrs.colors-link("1");
+  font-size: type.font-size-st(sc);
+  padding: padd.padding-st-v(s) padd.padding-st-h(l);
+}
