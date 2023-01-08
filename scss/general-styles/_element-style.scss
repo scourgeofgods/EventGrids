@@ -1,3 +1,4 @@
+@use "../general-styles/gradient" as grad;
 html {
   scroll-behavior: smooth;
 }
@@ -8,6 +9,7 @@ body {
 body {
   font-family: "Roboto", sans-serif;
   line-height: 1.5;
+  background-image: grad.gradient("1");
 }
 
 a,

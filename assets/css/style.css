@@ -20,6 +20,7 @@ body {
 body {
   font-family: "Roboto", sans-serif;
   line-height: 1.5;
+  background-image: linear-gradient(45deg, hsla(253deg, 82%, 42%, 0.9), hsla(327deg, 97%, 48%, 0.7));
 }
 
 a,
