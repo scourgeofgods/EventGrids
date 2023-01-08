@@ -3,7 +3,7 @@
 @use "../general-styles/padding" as padd;
 
 .sec-para {
-  font-size: type.font-size-d(xs);
+  font-size: type.font-size-st(sc);
   color: clrs.colors-type("1");
   text-align: center;
   margin-bottom: 4rem;
